@@ -1,0 +1,32 @@
+[project]
+name = "fastapi-antigravity-template"
+version = "0.1.0"
+description = "Antigravity FastAPI Template"
+readme = "README.md"
+requires-python = ">=3.13"
+dependencies = [
+    "asyncpg>=0.31.0",
+    "fastapi>=0.128.6",
+    "httpx>=0.28.1",
+    "pydantic-settings>=2.12.0",
+    "sqlalchemy>=2.0.46",
+    "uvicorn>=0.40.0",
+]
+
+[dependency-groups]
+dev = [
+    "aiosqlite>=0.22.1",
+    "pytest>=9.0.2",
+    "pytest-asyncio>=1.3.0",
+    "ruff>=0.15.0",
+]
+
+[tool.pytest.ini_options]
+pythonpath = "."
+addopts = "-v"
+asyncio_mode = "auto"
+testpaths = ["tests"]
+
+[tool.ruff]
+line-length = 88
+target-version = "py313"
