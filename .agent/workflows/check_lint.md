@@ -2,11 +2,13 @@
 description: Check and fix code style
 ---
 
-1. **Format Code**:
-   - Command: `pnpm exec prettier --write .`
+# Check Lint
 
-2. **Lint Code**:
-   - Command: `pnpm run lint`
+1. **Lint Code**:
+   - Command: `uv run ruff check --fix .`
+
+2. **Format Code**:
+   - Command: `uv run ruff format .`
 
 3. **Verify**:
     - Ensure no errors remain.
